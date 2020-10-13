@@ -1,0 +1,99 @@
+
+.container-card{
+    background: linear-gradient(to bottom, $bg-gradient-1, $bg-gradient-2);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: $repeat;
+    @include display-flex-center;
+    flex-direction: column;
+    font-size: $font-size-body;
+    font-family: 'Kumbh Sans', sans-serif;
+    z-index: 3;
+    overflow: hidden;
+    
+}
+
+    .card{
+        @include display-flex-center;
+        background-color: white;
+        border-radius: 2rem;
+        max-width: 65%;
+        max-height: 70%;
+        overflow: hidden;
+        letter-spacing: 1px;
+        &__bloc-images{
+            flex: 1;
+            max-width: 50%; 
+            overflow: hidden; 
+
+            &--position{
+                :nth-child(1){
+                    position: relative;
+                    opacity: 0.5;
+                    z-index: 2;
+                }
+                
+            }
+
+            &--absolute{
+                :nth-child(1){
+                    opacity: 0.9;
+                    position: absolute;
+                    z-index: 2;
+                    margin-top: -550px;             
+                }
+            }
+
+            &--box{
+                :nth-child(1){
+                    opacity: 0.9;
+                    position: absolute;
+                    z-index: 3;
+                    margin-top: -415px;
+                    margin-left: -95px;
+                }
+            }
+        }
+        
+        &__bloc-text{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            flex: 1;
+            padding: 3rem 0 3rem 0;
+
+            h1{
+                align-self: flex-start;
+            }
+        }
+    }
+
+.card-list{
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+
+    &__text{
+        padding: .25rem 0;
+        border-bottom: 2px solid rgba(0, 0, 0, .1);
+        line-height: normal;
+        margin-right: 5rem;
+
+        &--display{
+           display: grid;
+           justify-content: center;
+           align-content: center;
+           grid-template-columns: repeat(20, 1fr);
+
+           :nth-child(1){
+            grid-column: 1/20;
+            grid-row: 1;
+           }
+        }
+
+        &--hidden{
+            visibility: visible;
+            width: 95%;    
+        }
+    }
+}
