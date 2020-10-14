@@ -13,7 +13,6 @@
   z-index: 3;
   overflow: hidden;
 }
-
 .card {
   display: flex;
   justify-content: center;
@@ -25,6 +24,12 @@
   overflow: hidden;
   letter-spacing: 1px;
 }
+@media all and (max-width: 1210px) {
+  .card {
+    letter-spacing: 0;
+    border-radius: 1rem;
+  }
+}
 .card__bloc-images {
   flex: 1;
   max-width: 50%;
@@ -35,11 +40,32 @@
   opacity: 0.5;
   z-index: 2;
 }
+@media all and (max-width: 1210px) {
+  .card__bloc-images--position :nth-child(1) {
+    display: none;
+  }
+}
 .card__bloc-images--absolute :nth-child(1) {
   opacity: 0.9;
   position: absolute;
   z-index: 2;
   margin-top: -550px;
+}
+@media all and (max-width: 1210px) {
+  .card__bloc-images--absolute :nth-child(1) {
+    display: none;
+  }
+}
+.card__bloc-images--mobile {
+  display: none;
+}
+@media all and (max-width: 1210px) {
+  .card__bloc-images--mobile {
+    display: block;
+    position: absolute;
+    margin-top: -19.1rem;
+    margin-left: 2rem;
+  }
 }
 .card__bloc-images--box :nth-child(1) {
   opacity: 0.9;
@@ -48,6 +74,11 @@
   margin-top: -415px;
   margin-left: -95px;
 }
+@media all and (max-width: 1210px) {
+  .card__bloc-images--box :nth-child(1) {
+    display: none;
+  }
+}
 .card__bloc-text {
   display: flex;
   justify-content: center;
@@ -55,8 +86,19 @@
   flex: 1;
   padding: 3rem 0 3rem 0;
 }
+@media all and (max-width: 1210px) {
+  .card__bloc-text {
+    padding: 5rem 1rem 1rem 1rem;
+    flex: none;
+  }
+}
 .card__bloc-text h1 {
   align-self: flex-start;
+}
+@media all and (max-width: 1210px) {
+  .card__bloc-text h1 {
+    align-self: center;
+  }
 }
 
 .card-list {
@@ -70,11 +112,20 @@
   line-height: normal;
   margin-right: 5rem;
 }
+@media all and (max-width: 1210px) {
+  .card-list__text {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+}
 .card-list__text--display {
   display: grid;
   justify-content: center;
   align-content: center;
   grid-template-columns: repeat(20, 1fr);
+}
+.card-list__text--display:hover {
+  cursor: pointer;
 }
 .card-list__text--display :nth-child(1) {
   grid-column: 1/20;

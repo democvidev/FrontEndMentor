@@ -10,6 +10,10 @@
     font-family: 'Kumbh Sans', sans-serif;
     z-index: 3;
     overflow: hidden;
+
+    @media all and (max-width: $breakpoint-tablet) {
+        
+    }
     
 }
 
@@ -21,6 +25,12 @@
         max-height: 70%;
         overflow: hidden;
         letter-spacing: 1px;
+
+        @media all and (max-width: $breakpoint-tablet) {
+            letter-spacing: 0;
+            border-radius: 1rem;
+        }
+
         &__bloc-images{
             flex: 1;
             max-width: 50%; 
@@ -31,6 +41,11 @@
                     position: relative;
                     opacity: 0.5;
                     z-index: 2;
+                    
+
+                    @media all and (max-width: $breakpoint-tablet) {
+                        display: none;
+                    }
                 }
                 
             }
@@ -40,8 +55,22 @@
                     opacity: 0.9;
                     position: absolute;
                     z-index: 2;
-                    margin-top: -550px;             
+                    margin-top: -550px;   
+                    
+                     @media all and (max-width: $breakpoint-tablet) {
+                        display: none;                         
+                    }
                 }
+            }
+
+            &--mobile{
+                display: none;
+                @media all and (max-width: $breakpoint-tablet) {
+                     display:block;
+                     position: absolute;   
+                     margin-top: -19.1rem;
+                     margin-left: 2rem;
+                    }
             }
 
             &--box{
@@ -51,6 +80,10 @@
                     z-index: 3;
                     margin-top: -415px;
                     margin-left: -95px;
+
+                    @media all and (max-width: $breakpoint-tablet) {
+                        display: none;
+                    }
                 }
             }
         }
@@ -62,8 +95,16 @@
             flex: 1;
             padding: 3rem 0 3rem 0;
 
+            @media all and (max-width: $breakpoint-tablet) {
+                padding: 5rem 1rem 1rem 1rem;
+                flex: none;                
+            }
+
             h1{
                 align-self: flex-start;
+                @media all and (max-width: $breakpoint-tablet) {
+                    align-self: center;
+                 }
             }
         }
     }
@@ -78,6 +119,11 @@
         border-bottom: 2px solid rgba(0, 0, 0, .1);
         line-height: normal;
         margin-right: 5rem;
+        
+        @media all and (max-width:$breakpoint-tablet){
+            margin-right: 0.5rem;
+            margin-left: 0.5rem;
+        }
 
         &--display{
            display: grid;
@@ -85,6 +131,11 @@
            align-content: center;
            grid-template-columns: repeat(20, 1fr);
 
+           &:hover{
+               cursor: pointer;
+           }
+
+        
            :nth-child(1){
             grid-column: 1/20;
             grid-row: 1;
