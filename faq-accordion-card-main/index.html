@@ -6,12 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./public/css/app.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-
-
+  <link rel="stylesheet" href="./public/css/app.css">  
+  <script src="./public/js/script.js" defer></script>
 
   <title>Frontend Mentor | FAQ Accordion Card</title>
 
@@ -32,42 +28,39 @@
   <div class="card">
     <div class="card__bloc-images">
       <div class="card__bloc-images--position"><img src="./images/bg-pattern-desktop.svg" alt="image desktop"></div>
+      <div class="card__bloc-images--desktop"><img src="./images/bg-pattern-mobile.svg" alt="image desktop"></div>
+
       <div class="card__bloc-images--absolute"><img src="./images/illustration-woman-online-desktop.svg" alt="image woman"></div>
       <div class="card__bloc-images--mobile"><img src="./images/illustration-woman-online-mobile.svg" alt="image woman"></div>
-      <div class="card__bloc-images--box"><img src="./images/illustration-box-desktop.svg" alt="image box"></div>
+      <div  class="card__bloc-images--box"><img id="bloc" src="./images/illustration-box-desktop.svg" alt="image box"></div>
     </div>
-    <div class="card__bloc-text">
+    <div id="accordeon" class="card__bloc-text">
       <h1>FAQ</h1>
-      <ul class="card-list">
+      <ul id="list" class="card-list">
         <li class="card-list__text">
-          <p class="card-list__text--display"><span>How many team members can I invite?</span><img src="./images/icon-arrow-down.svg" alt=""></p>
-          <p class="card-list__text--hidden"></p>
+          <p class="card-list__text--display"><span id="0">How many team members can I invite?</span><img class="icon" src="./images/icon-arrow-down.svg" alt=""></p>         
         </li>
         <li class="card-list__text">
-          <p class="card-list__text--display"><span>What is the maximum file upload size?</span><img src="./images/icon-arrow-down.svg" alt=""></p>
-          <p class="card-list__text--hidden"></p>
+          <p class="card-list__text--display"><span id="1">What is the maximum file upload size?</span><img class="icon" src="./images/icon-arrow-down.svg" alt=""></p>          
         </li>
         <li class="card-list__text">
-          <p class="card-list__text--display"><span>How do I reset my password?</span><img src="./images/icon-arrow-down.svg" alt=""></p>
-          <p class="card-list__text--hidden"></p>
+          <p class="card-list__text--display"><span id="2">How do I reset my password?</span><img class="icon" src="./images/icon-arrow-down.svg" alt=""></p>         
         </li>
         <li class="card-list__text">
-          <p class="card-list__text--display"><span>Can I cancel my subscription?</span><img src="./images/icon-arrow-down.svg" alt=""></p>
-          <p class="card-list__text--hidden"></p>
+          <p class="card-list__text--display"><span id="3">Can I cancel my subscription?</span><img class="icon" src="./images/icon-arrow-down.svg" alt=""></p>          
         </li>
         <li class="card-list__text">
-          <p class="card-list__text--display"><span>Do you provide additional support?</span><img src="./images/icon-arrow-down.svg" alt=""></p>
-          <p class="card-list__text--hidden"></p>
+          <p class="card-list__text--display"><span id="4">Do you provide additional support?</span><img class="icon" src="./images/icon-arrow-down.svg" alt=""></p>          
         </li>
       </ul>
     </div>
   </div>
 
-  <div class="attribution">
+  <!--<div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Vladislav CIOBANU</a>.
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+  </div>-->
+  
 
 </body>
 
