@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
     crossorigin="anonymous" />
+  <link rel="stylesheet" href="./public/css/app.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="./public/js/script.js" defer></script>
 
   <title>Frontend Mentor | Article preview component</title>
 
@@ -28,20 +30,39 @@
 <body>
 
   <div class="container">
-    <div class="__immage"></div>
-    <div class="__article">
-      Shift the overall look and feel by adding these wonderful
-      touches to furniture in your home
+    <div class="section">
+      <div class="section__image"><img class="picture" src="./images/drawers.jpg" alt="image article"></div>
+      <div class="section__article">
+        <h1>Shift the overall look and feel by adding these wonderful
+          touches to furniture in your home</h1>
 
-      Ever been in a room and felt like something was missing? Perhaps
-      it felt slightly bare and uninviting. I’ve got some simple tips
-      to help you make any room feel complete.
-
-      Michelle Appleton
-      28 Jun 2020
-
-      Share
-
+        <p class="section__article--size"> Ever been in a room and felt like something was missing? Perhaps
+          it felt slightly bare and uninviting. I’ve got some simple tips
+          to help you make any room feel complete.</p>
+        <div class="section__article--share">
+          <img class="avatar" src="./images/avatar-michelle.jpg" alt="avatar">
+          <div class="icons">
+            <h3>Michelle Appleton</h3>
+            <p>28 Jun 2020</p>
+          </div>
+          <div id="shared" class="share hidden">Share
+            <a href="#">
+              <img src="./images/icon-facebook.svg" alt="icon-facebook">
+            </a>
+            <a href="#">
+              <img src="./images/icon-twitter.svg" alt="icon-twitter">
+            </a>
+            <a href="#">
+              <img src="./images/icon-pinterest.svg" alt="icon-pinterest">
+            </a>
+            <div class="share__square"></div>
+          </div>
+          <div class="image">
+            <span id="images" class="image__social"><img class="image__social--share" src="./images/icon-share.svg"
+                alt="share"></span>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>

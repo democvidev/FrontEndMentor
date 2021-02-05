@@ -34,14 +34,16 @@ function showAnswer() {
                 answer.classList.toggle('card-list__text--hidden');
                 answer.innerHTML = `${answersData[spanEl][spanEl]}`;
                 questEl.parentNode.appendChild(answer);
+
+                blocEl.classList.toggle('move');
             } else {
                 questEl.nextElementSibling.remove();
             }
         };
 
-        questEl.onmouseover = function moveBloc() {
-            blocEl.classList.toggle('move');
-        }
+        // questEl.onmouseover = function moveBloc() {
+        //     blocEl.classList.toggle('move');
+        // }
     });
 }
 
